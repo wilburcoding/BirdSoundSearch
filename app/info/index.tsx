@@ -183,7 +183,7 @@ Your browser does not support the audio element.
             <Icon
               name='binoculars' size={28} style={{ marginTop: 5, marginRight: 2 }} type="material-community" />
             <View>
-              <Text style={{ color: "#C6C6C6", fontSize: 15, paddingLeft: 3 }}>ANIMAL SEEN</Text>
+              <Text style={{ color: "#C6C6C6", fontSize: 15, paddingLeft: 3 }}>BIRD SEEN</Text>
               <Text style={styles.infoText}>{getSeen()}</Text>
             </View>
           </View>
