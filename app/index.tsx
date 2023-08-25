@@ -22,14 +22,15 @@ export default function App() {
       return time.split(":")[0] + "m " + Number(time.split(":")[1]).toString() + "s";
     }
   }
+  
   async function search(value: any) {
     try {
       setIsLoading(true);
       setError(null);
       setVal(value);
-      console.log(value)
       const res = await axios.get('https://xeno-canto.org/api/2/recordings', { params: { query: value } });
       const data = res.data.recordings.splice(0, 100);
+      console.log(data)
       setResult(data);
     } catch (e) {
       setError(e);
@@ -67,6 +68,8 @@ export default function App() {
           <View>
             {(
               result.map(function (item: any, index) {
+                item.sono = item.sono.small
+                item.osci = item.osci.large
                 return (
                   <TouchableOpacity onPress={() => router.push({pathname:"/info", params:item})} key={index} style={styles.soundItem}>
                     <View style={{flexDirection:"row", overflow:"hidden", flexWrap:"wrap"}}>
@@ -83,7 +86,7 @@ export default function App() {
                           name='map-marker-radius' size={23} type="material-community" />
                         <Text style={styles.infoText}>{item.cnt}</Text>
                       </View>
-                      <View style={[styles.infoView, {flex:5}]}>
+                      <View style={[styles.infoView, { flex: 5 }]}>
                         <Icon
                           name='information' size={23} type="material-community" />
                         <Text style={styles.infoText}>{titleCase(item.method)}</Text>
@@ -141,7 +144,9 @@ const styles = StyleSheet.create({
   },
   soundItem: {
     maxHeight: 150,
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingTop:5,
+    paddingBottom:15,
     marginRight: 10,
     width: "100%",
     borderColor: "#e2e2e2",
