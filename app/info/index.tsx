@@ -164,7 +164,7 @@ Your browser does not support the audio element.
             <Icon
               name='music' size={28} style={{ marginTop: 5, marginRight: 2 }} type="material-community" />
             <View>
-              <Text style={{ color: "#C6C6C6", fontSize: 15, paddingLeft: 3 }}>TIME TAKEN</Text>
+              <Text style={{ color: "#C6C6C6", fontSize: 15, paddingLeft: 3 }}>TYPE OF SOUND</Text>
               <Text style={styles.infoText}>{titleCase(data.type)}</Text>
             </View>
           </View>
