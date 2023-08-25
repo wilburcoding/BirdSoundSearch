@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "AnimalSoundSearch",
-    "slug": "AnimalSoundSearch",
-    "scheme":"AnimalSoundSearch",
+    "name": "BirdSoundSearch",
+    "slug": "BirdSoundSearch",
+    "scheme":"BirdSoundSearch",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
